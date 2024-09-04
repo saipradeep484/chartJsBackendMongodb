@@ -11,16 +11,17 @@ import jakarta.persistence.Id;
 public class Orders {
      @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int coustmerId;
-    private double totalPrice;
-    private Timestamp createdAt;
+   // private int customerId;
+    
+   
+    private Timestamp createdAt; private double totalPrice;
 
-    public int getCoustmerId() {
-        return coustmerId;
-    }
-    public void setCoustmerId(int coustmerId) {
-        this.coustmerId = coustmerId;
-    }
+    // public int getCoustmerId() {
+    //     return customerId;
+    // }
+    // public void setCoustmerId(int customerId) {
+    //     this.customerId = customerId;
+    // }
     public double getTotalPrice() {
         return totalPrice;
     }
