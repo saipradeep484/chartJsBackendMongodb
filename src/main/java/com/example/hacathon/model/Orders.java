@@ -13,26 +13,22 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
    // private int customerId;
     
-   
-    private Timestamp createdAt; private double totalPrice;
+   private String months;
+     private double totalPrice;
 
-    // public int getCoustmerId() {
-    //     return customerId;
-    // }
-    // public void setCoustmerId(int customerId) {
-    //     this.customerId = customerId;
-    // }
+    
     public double getTotalPrice() {
         return totalPrice;
     }
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
-    public Timestamp getCreatedAt() {
-        return createdAt;
+   
+    public String getMonth() {
+        return months;
     }
-    public void setCreatedAt(Timestamp createdAt) {
-        this.createdAt = createdAt;
+    public void setMonth(String months) {
+        this.months = months;
     }
     
 }

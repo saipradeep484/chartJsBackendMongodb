@@ -20,6 +20,6 @@ CREATE TABLE orders (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     customer_id BIGINT,
     total_price DECIMAL(10, 2),
-    created_at TIMESTAMP,
+    months VARCHAR(255),
     FOREIGN KEY (customer_id) REFERENCES customers(id)
 );
