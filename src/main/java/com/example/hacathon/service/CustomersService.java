@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CustomersService {
@@ -14,12 +15,19 @@ public class CustomersService {
     @Autowired
     private CustomersRepo customersRepo;
 
-    // Method to retrieve all customers
-    public List<Customers> getAllCustomers() {
+   
+   public Customers saveCustomers(Customers customers)
+   {
+    return customersRepo.save(customers);
+   }
+        // Method to retrieve all customers
+    public List<Customers> findAllCustomers(){
         return customersRepo.findAll();
     }
-
-    // public Customers saveCustomer(Customers customer) {
-    //     return customersRepo.save(customer);
-    // }
+    public Optional<Customers> findById(String s1){
+        return customersRepo.findById(s1);
+    }
+    public void deleteById(String s2){
+        customersRepo.deleteById(s2);
+    }
 }

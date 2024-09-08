@@ -1,15 +1,17 @@
 package com.example.hacathon.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+// import jakarta.persistence.Entity;
+// import jakarta.persistence.GeneratedValue;
+// import jakarta.persistence.GenerationType;
+// import jakarta.persistence.Id;
+
+@Document(collation = "hacathon1")
 public class Products {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-  //  private int productID;
+   private String id;
     
     private String title;
     private double price;

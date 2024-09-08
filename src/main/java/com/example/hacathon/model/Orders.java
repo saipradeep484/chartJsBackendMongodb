@@ -2,16 +2,17 @@ package com.example.hacathon.model;
 
 import java.sql.Timestamp;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+// import jakarta.persistence.Entity;
+// import jakarta.persistence.GeneratedValue;
+// import jakarta.persistence.GenerationType;
+// import jakarta.persistence.Id;
+
+@Document(collation = "hacathon1")
 public class Orders {
-     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-   // private int customerId;
+     @org.springframework.data.annotation.Id
+   private String id;
     
    private String months;
      private double totalPrice;
